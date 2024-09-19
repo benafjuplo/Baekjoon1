@@ -51,7 +51,7 @@ i번째 공격-회피 연속 동작 상황에서, 공격 시에는 체내 아드
 공격 먼저 : floor(Ai * Ki) - Bi, 회피 먼저 : Ai - floor(Bi * Ki)
 백준의 문제에서는 floor 표기가 대괄호처럼 보일 수 있으므로 주의한다.
 또한, Ki가 1보다 작으면 Ai 또는 Bi가 작아지므로, 각 동작에서 <algorithm> 헤더의 max()함수를 사용하거나 회피를 먼저하는 식으로 코드를 작성한다.
-두 가지 모두 테스트 해본 결과 max() 함수를 사용한 경우가 약간 더 빠른 성능을 보였다.
+테스트 해본 결과 두 방법 모두 같은 성능을 보였다.
 
 아레에서는, 문제에서 주의해야 할 함정들을 설명한다.
 먼저 결과 값이 매우 커질 수 있으므로 long long 자료형이 필요하다.
@@ -105,7 +105,7 @@ If the attack happens first: floor(Ai * Ki) - Bi.
 If the dodge happens first: Ai - floor(Bi * Ki).
 Be careful when using floor in the problem, as in Baekjoon, it might be represented like brackets.
 Additionally, if Ki is less than 1, Ai or Bi will decrease, so the code should either use the max() function from the <algorithm> header or handle dodging first.
-After testing both approaches, using the max() function resulted in slightly better performance.
+After testing, both methods showed the same performance.
 
 Below are some pitfalls to watch out for in this problem.
 First, the result can be very large, so the long long data type is needed.
@@ -169,3 +169,4 @@ int main() {
 }
 
 //Finish
+//Submit
